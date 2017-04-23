@@ -24,6 +24,8 @@ function renderAccessName(accessType) {
       return 'Admin';
     case _accessTypeConstants.ORG_MEMBER_ACCESS:
       return 'Member';
+    default:
+      return '';
   }
 }
 

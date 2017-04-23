@@ -5,18 +5,20 @@ import {
   VIEW_ACCESS,
   ORG_OWNER_ACCESS,
   ORG_ADMIN_ACCESS,
-  ORG_MEMBER_ACCESS
-} from '../constants/accessTypeConstants'
+  ORG_MEMBER_ACCESS,
+} from '../constants/accessTypeConstants';
 
-export function renderAccessName (accessType) {
+export function renderAccessName(accessType) {
   switch (accessType) {
-    case OWNER_ACCESS: return 'Owner'
-    case ADMIN_ACCESS: return 'Admin'
-    case EDIT_ACCESS: return 'Edit'
-    case VIEW_ACCESS: return 'Member'
-    case ORG_OWNER_ACCESS: return 'Owner'
-    case ORG_ADMIN_ACCESS: return 'Admin'
-    case ORG_MEMBER_ACCESS: return 'Member'
+    case OWNER_ACCESS: return 'Owner';
+    case ADMIN_ACCESS: return 'Admin';
+    case EDIT_ACCESS: return 'Edit';
+    case VIEW_ACCESS: return 'Member';
+    case ORG_OWNER_ACCESS: return 'Owner';
+    case ORG_ADMIN_ACCESS: return 'Admin';
+    case ORG_MEMBER_ACCESS: return 'Member';
+    default:
+      return '';
   }
 }
 
@@ -25,7 +27,7 @@ export function renderAccessName (accessType) {
 //   }
 // }
 
-export function renderRole (memberUid, $$design) {
+export function renderRole(memberUid, $$design) {
   // if (!$$design) {
   //   return ''
   // }
