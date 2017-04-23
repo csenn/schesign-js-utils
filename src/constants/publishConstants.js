@@ -1,0 +1,3 @@
+export const UPDATE_MAJOR = 'UPDATE_MAJOR'
+export const UPDATE_MINOR = 'UPDATE_MINOR'
+export const UPDATE_PATCH = 'UPDATE_PATCH'
