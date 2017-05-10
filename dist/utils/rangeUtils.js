@@ -3,11 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _keys = require('babel-runtime/core-js/object/keys');
-
-var _keys2 = _interopRequireDefault(_keys);
-
 exports.createRange = createRange;
 exports.isRangeLinkedClass = isRangeLinkedClass;
 exports.isRangeNestedObject = isRangeNestedObject;
@@ -93,38 +88,31 @@ function getDisplayLabel(range) {
 
 /* This function ensures the range only has meta properties that are relevant
 to the selected type */
-function _cleanKeys(range, keys) {
-  var allowed = keys.concat('type');
-  return (0, _keys2.default)(range).reduce(function (prev, next) {
-    if ((0, _includes2.default)(allowed, next)) {
-      prev[next] = range[next];
-    }
-    return prev;
-  }, {});
-}
+// function _cleanKeys (range, keys) {
+//   const allowed = keys.concat('type')
+//   return Object.keys(range).reduce((prev, next) => {
+//     if (includes(allowed, next)) {
+//       prev[next] = range[next]
+//     }
+//     return prev
+//   }, {})
+// }
 
 function cleanRange(range) {
-  var type = range.type;
+  throw new Error('Deprecated');
+  // const { type } = range
 
-
-  switch (type) {
-    case _rangeConstants.LINKED_CLASS:
-      return _cleanKeys(range, ['ref']);
-    case _rangeConstants.NESTED_OBJECT:
-      return _cleanKeys(range, ['propertyRefs']);
-    case _rangeConstants.TEXT:
-      return _cleanKeys(range, ['format', 'regex', 'minLength', 'maxLength']);
-    case _rangeConstants.NUMBER:
-      return _cleanKeys(range, ['format', 'min', 'max']);
-    case _rangeConstants.BOOLEAN:
-      return _cleanKeys(range, []);
-    case _rangeConstants.DATE:
-      return _cleanKeys(range, ['format']);
-    case _rangeConstants.ENUM:
-      return _cleanKeys(range, ['values']);
-    default:
-      throw new Error('Bad range type given: ' + type);
-  }
+  // switch (type) {
+  //   case LINKED_CLASS: return _cleanKeys(range, ['ref'])
+  //   case NESTED_OBJECT: return _cleanKeys(range, ['propertyRefs'])
+  //   case TEXT: return _cleanKeys(range, ['format', 'regex', 'minLength', 'maxLength'])
+  //   case NUMBER: return _cleanKeys(range, ['format', 'min', 'max'])
+  //   case BOOLEAN: return _cleanKeys(range, [])
+  //   case DATE: return _cleanKeys(range, ['format'])
+  //   case ENUM: return _cleanKeys(range, ['values'])
+  //   default:
+  //     throw new Error(`Bad range type given: ${type}`)
+  // }
 }
 
 // What can ranges look like ?

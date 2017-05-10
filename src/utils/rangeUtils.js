@@ -82,30 +82,31 @@ export function getDisplayLabel (range) {
 
 /* This function ensures the range only has meta properties that are relevant
 to the selected type */
-function _cleanKeys (range, keys) {
-  const allowed = keys.concat('type')
-  return Object.keys(range).reduce((prev, next) => {
-    if (includes(allowed, next)) {
-      prev[next] = range[next]
-    }
-    return prev
-  }, {})
-}
+// function _cleanKeys (range, keys) {
+//   const allowed = keys.concat('type')
+//   return Object.keys(range).reduce((prev, next) => {
+//     if (includes(allowed, next)) {
+//       prev[next] = range[next]
+//     }
+//     return prev
+//   }, {})
+// }
 
 export function cleanRange (range) {
-  const { type } = range
+  throw new Error('Deprecated')
+  // const { type } = range
 
-  switch (type) {
-    case LINKED_CLASS: return _cleanKeys(range, ['ref'])
-    case NESTED_OBJECT: return _cleanKeys(range, ['propertyRefs'])
-    case TEXT: return _cleanKeys(range, ['format', 'regex', 'minLength', 'maxLength'])
-    case NUMBER: return _cleanKeys(range, ['format', 'min', 'max'])
-    case BOOLEAN: return _cleanKeys(range, [])
-    case DATE: return _cleanKeys(range, ['format'])
-    case ENUM: return _cleanKeys(range, ['values'])
-    default:
-      throw new Error(`Bad range type given: ${type}`)
-  }
+  // switch (type) {
+  //   case LINKED_CLASS: return _cleanKeys(range, ['ref'])
+  //   case NESTED_OBJECT: return _cleanKeys(range, ['propertyRefs'])
+  //   case TEXT: return _cleanKeys(range, ['format', 'regex', 'minLength', 'maxLength'])
+  //   case NUMBER: return _cleanKeys(range, ['format', 'min', 'max'])
+  //   case BOOLEAN: return _cleanKeys(range, [])
+  //   case DATE: return _cleanKeys(range, ['format'])
+  //   case ENUM: return _cleanKeys(range, ['values'])
+  //   default:
+  //     throw new Error(`Bad range type given: ${type}`)
+  // }
 }
 
 // What can ranges look like ?
