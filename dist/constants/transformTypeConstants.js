@@ -3,33 +3,30 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.convertForKnex = convertForKnex;
-var JSON_SCHEMA = exports.JSON_SCHEMA = 'JSON_SCHEMA';
-var XML_SCHEMA = exports.XML_SCHEMA = 'XML_SCHEMA';
-var JSON_LD = exports.JSON_LD = 'JSON_LD';
+var JSON_SCHEMA = exports.JSON_SCHEMA = 'jsonschema';
+var XML_SCHEMA = exports.XML_SCHEMA = 'xmlschema';
+var JSON_LD = exports.JSON_LD = 'jsonld';
+var SQL = exports.SQL = 'sql';
+var MONGOOSE = exports.MONGOOSE = 'mongoose';
+var JAVA = exports.JAVA = 'java';
+var GRAPH_QL = exports.GRAPH_QL = 'graphql';
 
-var POSTGRE_SQL = exports.POSTGRE_SQL = 'POSTGRE_SQL';
-var MY_SQL = exports.MY_SQL = 'MY_SQL';
-var MARIA_DB = exports.MARIA_DB = 'MARIA_DB';
-var SQ_LITE = exports.SQ_LITE = 'SQ_LITE';
-var MS_SQL = exports.MS_SQL = 'MS_SQL';
-var ORACLE = exports.ORACLE = 'ORACLE';
+var POSTGRE_SQL = exports.POSTGRE_SQL = 'postgres';
+var MY_SQL = exports.MY_SQL = 'mysql2';
+var MARIA_DB = exports.MARIA_DB = 'maria';
+var SQ_LITE = exports.SQ_LITE = 'sqlite3';
+var MS_SQL = exports.MS_SQL = 'mssql';
+var ORACLE = exports.ORACLE = 'oracle';
 
-function convertForKnex(db) {
-  switch (db) {
-    case POSTGRE_SQL:
-      return 'postgres';
-    case MY_SQL:
-      return 'mysql2';
-    case MARIA_DB:
-      return 'maria';
-    case SQ_LITE:
-      return 'sqlite3';
-    case MS_SQL:
-      return 'mssql';
-    case ORACLE:
-      return 'oracle';
-    default:
-      throw new Error('bad db constant: ' + db);
-  }
-}
+// export function convertForKnex (db) {
+//   switch (db) {
+//     case POSTGRE_SQL: return 'postgres'
+//     case MY_SQL: return 'mysql2'
+//     case MARIA_DB: return 'maria'
+//     case SQ_LITE: return 'sqlite3'
+//     case MS_SQL: return 'mssql'
+//     case ORACLE: return 'oracle'
+//     default:
+//       throw new Error(`bad db constant: ${db}`)
+//   }
+// }
