@@ -5,6 +5,7 @@ export const SQL = 'sql'
 export const MONGOOSE = 'mongoose'
 export const JAVA = 'java'
 export const GRAPH_QL = 'graphql'
+export const SWAGGER = 'swagger'
 
 export const POSTGRE_SQL = 'postgres'
 export const MY_SQL = 'mysql2'
