@@ -10,6 +10,7 @@ var SQL = exports.SQL = 'sql';
 var MONGOOSE = exports.MONGOOSE = 'mongoose';
 var JAVA = exports.JAVA = 'java';
 var GRAPH_QL = exports.GRAPH_QL = 'graphql';
+var SWAGGER = exports.SWAGGER = 'swagger';
 
 var POSTGRE_SQL = exports.POSTGRE_SQL = 'postgres';
 var MY_SQL = exports.MY_SQL = 'mysql2';
