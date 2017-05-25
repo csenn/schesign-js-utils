@@ -4,6 +4,7 @@ export const JSON_LD = 'jsonld'
 export const SQL = 'sql'
 export const MONGOOSE = 'mongoose'
 export const JAVA = 'java'
+export const GO = 'go'
 export const GRAPH_QL = 'graphql'
 export const SWAGGER = 'swagger'
 

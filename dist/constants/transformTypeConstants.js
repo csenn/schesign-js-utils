@@ -9,6 +9,7 @@ var JSON_LD = exports.JSON_LD = 'jsonld';
 var SQL = exports.SQL = 'sql';
 var MONGOOSE = exports.MONGOOSE = 'mongoose';
 var JAVA = exports.JAVA = 'java';
+var GO = exports.GO = 'go';
 var GRAPH_QL = exports.GRAPH_QL = 'graphql';
 var SWAGGER = exports.SWAGGER = 'swagger';
 
